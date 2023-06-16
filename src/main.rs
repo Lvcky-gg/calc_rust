@@ -25,7 +25,7 @@ fn operate(operator: char, first_number: f32, second_number: f32)->f32{
         '+' => first_number + second_number,
         '-' => first_number - second_number,
         '/' => first_number / second_number,
-        '*' => first_number * second_number,
+        '*'| 'x' | 'X' => first_number * second_number,
         _ => panic!("Panic. Invalid Operator used!!!")
     }
     //same as this
