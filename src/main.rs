@@ -21,17 +21,25 @@ fn main() {
 // -> return type
 // implicit return in conditionals!!!!!!!
 fn operate(operator: char, first_number: f32, second_number: f32)->f32{
-    if operator == '+'{
-    first_number + second_number
-    }else if operator == '-'{
-    first_number - second_number
-    }else if operator == '/'{
-    first_number / second_number
-    }else if operator  == '*' {
-    first_number * second_number
-    }else {
-    0.0
+    match operator {
+        '+' => first_number + second_number,
+        '-' => first_number - second_number,
+        '/' => first_number / second_number,
+        '*' => first_number * second_number,
+        _ => 0.0
     }
+    //same as this
+    // if operator == '+'{
+    // first_number + second_number
+    // }else if operator == '-'{
+    // first_number - second_number
+    // }else if operator == '/'{
+    // first_number / second_number
+    // }else if operator  == '*' {
+    // first_number * second_number
+    // }else {
+    // 0.0
+    // }
 }
 
 fn output(first_number: f32, operator:char, second_number: f32, result: f32) -> String {
